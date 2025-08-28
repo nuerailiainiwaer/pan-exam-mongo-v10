@@ -812,3 +812,16 @@ app.get('/api/admin/attempts/:id/result', requireAdmin, function(req, res) {
 
 /* ----- Start server ----- */
 app.listen(PORT, function() { console.log('Server running on http://localhost:' + PORT); });
+// top of file (ensure these exist)
+var path = require('path');
+var compression = require('compression');
+
+app.use(compression());
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('trust proxy', 1); // correct secure cookies behind proxy
+// if you use helmet/rate-limit, keep those too
+
+var PORT = process.env.PORT || 3000;
+app.listen(PORT, function() {
+    console.log('Server running on port', PORT);
+});
