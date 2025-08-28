@@ -1,14 +1,13 @@
 {
     "name": "pan-exam-mongo-v10",
     "version": "1.0.0",
-    "private": true,
     "description": "Pan-Exam system for Acupuncture (v10) with Exam Mode + Exam History",
     "main": "server.js",
     "scripts": {
         "start": "node server.js"
     },
     "engines": {
-        "node": ">=18"
+        "node": "20.x"
     },
     "dependencies": {
         "bcryptjs": "^2.4.3",
