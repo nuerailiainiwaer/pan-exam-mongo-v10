@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Review (Grid)</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .grid-qs{display:grid;grid-template-columns:repeat(auto-fill,minmax(46px,1fr));gap:8px}
+    .qnum{padding:6px 10px;border:1px solid var(--muted);border-radius:6px;background:#fff;cursor:pointer;text-align:center}
+    .qnum.wrong{background:#fee2e2;border-color:#ef4444}
+    .detail{margin-top:16px}
+  </style>
+</head>
+<body>
+  <div class="header"><div class="title">Exam Review</div></div>
+  <div class="container">
+    <div id="back"></div>
+    <div class="card">
+      <div id="meta" class="small"></div>
+      <div id="grid" class="grid-qs" style="margin-top:10px"></div>
+    </div>
+    <div class="card detail" id="detail"></div>
+  </div>
+  <script src="../js/common.js"></script>
+  <script src="../js/user-exam-review-grid.js"></script>
+</body>
+</html>

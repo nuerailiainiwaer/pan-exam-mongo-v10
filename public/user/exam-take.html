@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take Exam</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .timerbar{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+    .pill{padding:4px 8px;border-radius:999px;background:#eef2ff;border:1px solid #c7d2fe}
+    .nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .qnum{padding:6px 10px;border:1px solid var(--muted);border-radius:6px;background:#fff;cursor:pointer}
+    .qnum.answered{background:#d1fae5;border-color:#10b981}
+    .qnum.flagged{background:#fee2e2;border-color:#ef4444}
+  </style>
+</head>
+<body>
+  <div class="header"><div class="title">Exam</div></div>
+  <div class="container">
+    <div id="back"></div>
+    <div class="card">
+      <div class="timerbar">
+        <span id="timer" class="pill">Time: 60:00</span>
+        <span id="progress" class="pill">0 / 50</span>
+        <button id="submit" class="btn bad" style="margin-left:auto">Submit Exam</button>
+        <button id="exit" class="btn">Exit Exam</button>
+      </div>
+      <hr>
+      <div id="questionBox" class="item"></div>
+      <div class="row" style="margin-top:10px">
+        <button id="prev" class="btn">← Prev</button>
+        <button id="next" class="btn">Next →</button>
+        <button id="flag" class="btn bad" style="margin-left:auto">Flag</button>
+        <button id="clear" class="btn">Clear</button>
+      </div>
+      <div class="nav" id="nav"></div>
+    </div>
+  </div>
+  <script src="../js/common.js"></script>
+  <script src="../js/user-exam-take.js"></script>
+</body>
+</html>
